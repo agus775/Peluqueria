@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Nuevo Turno</title>
+    <link rel="stylesheet" href="nuevo_turno.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Reservar Turno</h1>
+
+</header>
+
+<div class="contenedor-formulario">
+
+<form action="{{ url_for('nuevo') }}" method="POST">
+
+<label>Nombre</label>
+
+<input
+type="text"
+name="nombre"
+required>
+
+<label>Apellido</label>
+
+<input
+type="text"
+name="apellido"
+required>
+
+<label>DNI</label>
+
+<input
+type="text"
+name="dni"
+required>
+
+<label>Teléfono</label>
+
+<input
+type="text"
+name="telefono"
+required>
+
+<label>Barbero</label>
+
+<select name="empleado" required>
+
+{% for empleado in empleados %}
+
+<option value="{{ empleado.id_empleado }}">
+
+{{ empleado.nombre }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<label>Servicio</label>
+
+<select name="servicio" required>
+
+{% for servicio in servicios %}
+
+<option value="{{ servicio.id_servicio }}">
+
+{{ servicio.nombre }}
+
+- $
+
+{{ servicio.precio }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<label>Fecha</label>
+
+<input
+type="date"
+name="fecha"
+required>
+
+<label>Hora</label>
+
+<input
+type="time"
+name="hora"
+required>
+
+<div class="botones">
+
+<button
+type="submit"
+class="guardar">
+
+Guardar Turno
+
+</button>
+
+<a href="{{ url_for('index') }}">
+
+<button
+type="button"
+class="cancelar">
+
+Cancelar
+
+</button>
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

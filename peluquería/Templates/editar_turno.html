@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Turno</title>
+    <link rel="stylesheet" href="editar_turno.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Editar Turno</h1>
+
+</header>
+
+ <div class="contenedor-formulario">
+ <form method="POST">
+
+  <label>Barbero</label>
+
+<select name="empleado">
+
+ {% for empleado in empleados %}
+
+ <option
+value="{{ empleado.id_empleado }}"
+{% if empleado.id_empleado == turno.id_empleado %}
+selected
+{% endif %}
+>
+ {{ empleado.nombre }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<label>Servicio</label>
+
+<select name="servicio">
+
+{% for servicio in servicios %}
+
+<option
+value="{{ servicio.id_servicio }}"
+{% if servicio.id_servicio == turno.id_servicio %}
+selected
+{% endif %}
+>
+
+{{ servicio.nombre }}
+
+- $
+
+{{ servicio.precio }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<label>Fecha</label>
+
+<input
+type="date"
+name="fecha"
+value="{{ turno.fecha }}"
+required>
+
+<label>Hora</label>
+
+<input
+type="time"
+name="hora"
+value="{{ turno.hora }}"
+required>
+
+<label>Estado</label>
+
+<select name="estado">
+
+<option
+value="Pendiente"
+{% if turno.estado=="Pendiente" %}
+selected
+{% endif %}
+>
+
+Pendiente
+
+</option>
+
+<option
+value="Finalizado"
+{% if turno.estado=="Finalizado" %}
+selected
+{% endif %}
+>
+
+Finalizado
+
+</option>
+
+<option
+value="Cancelado"
+{% if turno.estado=="Cancelado" %}
+selected
+{% endif %}
+>
+
+Cancelado
+
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="guardar">
+
+Guardar Cambios
+
+</button>
+
+<button
+type="button"
+class="cancelar">
+
+Volver
+
+</button>
+</a>
+</form>
+</div>
+</body>
+</html>
