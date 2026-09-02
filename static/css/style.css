@@ -1,0 +1,693 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: #0e0e0d;
+    color: #f4f1e8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   CONTENEDOR SUPERIOR
+========================================= */
+
+.afue {
+    width: 100%;
+    min-height: 570px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 9, 0.97),
+            rgba(10, 10, 9, 0.82),
+            rgba(10, 10, 9, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid #292925;
+}
+
+
+/* =========================================
+   CAJA PRINCIPAL
+========================================= */
+
+.cua {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0 6%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 100px 0 50px;
+}
+
+header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(60px, 8vw, 115px);
+
+    line-height: 0.85;
+
+    letter-spacing: -4px;
+
+    color: #f4f1e8;
+
+   
+}
+
+
+
+header p {
+    max-width: 500px;
+
+    margin-top: 35px;
+
+    color: #aaa79e;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-marca {
+    color: #b89b5e;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #e8e4da;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    padding: 13px 22px;
+
+    border: 1px solid transparent;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #b89b5e;
+
+    border-color: #b89b5e;
+}
+
+
+/* BOTÓN RESERVAR */
+
+nav a:first-of-type {
+    background: #b89b5e;
+
+    color: #11110f;
+
+    font-weight: bold;
+}
+
+nav a:first-of-type:hover {
+    background: #f4f1e8;
+
+    color: #11110f;
+
+    border-color: #f4f1e8;
+}
+
+
+/* CERRAR SESIÓN */
+
+nav .btn-salir {
+    color: #aaa79e;
+}
+
+nav .btn-salir:hover {
+    color: #e05b4f;
+
+    border-color: #e05b4f;
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.busqueda {
+    width: 100%;
+
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 30px 0 100px;
+}
+
+.busqueda form {
+    width: 100%;
+
+    max-width: 650px;
+
+
+    gap: 10px;
+}
+
+.busqueda input {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 1px solid #35352f;
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: rgba(20, 20, 18, 0.9);
+
+    color: white;
+
+    font-size: 15px;
+}
+
+.busqueda input::placeholder {
+    color: #61605c;
+}
+
+.busqueda input:focus {
+    border-color: #b89b5e;
+}
+
+.busqueda button {
+    min-width: 120px;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: #b89b5e;
+
+    color: #11110f;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.busqueda button:hover {
+    background: #f4f1e8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SECCIÓN TURNOS
+========================================= */
+
+body > section {
+    width: 88%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+body > section h2 {
+    margin-bottom: 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    letter-spacing: -2px;
+}
+
+body > section h2::first-line {
+    color: #f4f1e8;
+}
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    background: #151513;
+
+    border: 1px solid #292925;
+
+    color: #e8e4da;
+}
+
+thead {
+    background: #b89b5e;
+
+    color: #11110f;
+}
+
+th {
+    padding: 18px 14px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+td {
+    padding: 18px 14px;
+
+    text-align: center;
+
+    border-top: 1px solid #292925;
+
+    color: #aaa79e;
+
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: 0.25s ease;
+}
+
+tbody tr:hover {
+    background: #1e1e1b;
+}
+
+tbody tr:hover td {
+    color: #f4f1e8;
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+td:nth-child(5) {
+    color: #b89b5e;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ESTADO
+========================================= */
+
+td:nth-child(8) {
+    font-weight: bold;
+
+    color: #b89b5e;
+}
+
+
+/* =========================================
+   BOTÓN EDITAR
+========================================= */
+
+.editar {
+    background: transparent;
+
+    color: #b89b5e;
+
+    border: 1px solid #b89b5e;
+
+    padding: 9px 15px;
+
+    border-radius: 0;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.editar:hover {
+    background: #b89b5e;
+
+    color: #11110f;
+}
+
+
+/* =========================================
+   BOTÓN ELIMINAR
+========================================= */
+
+.eliminar {
+    background: transparent;
+
+    color: #d85b50;
+
+    border: 1px solid #d85b50;
+
+    padding: 9px 15px;
+
+    border-radius: 0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.eliminar:hover {
+    background: #d85b50;
+
+    color: white;
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+.contenedor-formulario {
+    width: 90%;
+
+    max-width: 650px;
+
+    margin: 80px auto;
+
+    padding: 45px;
+
+    background: #151513;
+
+    border: 1px solid #292925;
+
+    border-radius: 0;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+label {
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+    color: #b89b5e;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #35352f;
+
+    border-radius: 0;
+
+    background: #0e0e0d;
+
+    color: white;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #b89b5e;
+}
+
+
+/* =========================================
+   BOTONES FORMULARIO
+========================================= */
+
+.botones {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.guardar {
+    background: #b89b5e;
+
+    color: #11110f;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 0;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.guardar:hover {
+    background: #f4f1e8;
+}
+
+.cancelar {
+    background: transparent;
+
+    color: #aaa79e;
+
+    border: 1px solid #44443e;
+
+    padding: 14px 28px;
+
+    border-radius: 0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cancelar:hover {
+    color: white;
+
+    border-color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 0;
+
+    padding: 50px 7%;
+
+    background: #080807;
+
+    border-top: 1px solid #292925;
+
+    color: #77756e;
+
+    text-align: center;
+}
+
+footer strong {
+    color: #b89b5e;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .cua {
+        padding: 0 5%;
+    }
+
+    header {
+        min-height: 330px;
+
+        padding-top: 80px;
+    }
+
+    header h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .nav-marca {
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .busqueda form {
+        flex-direction: column;
+    }
+
+    .busqueda button {
+        width: 100%;
+    }
+
+    body > section {
+        width: 92%;
+
+        padding: 60px 0;
+    }
+
+    .contenedor-formulario {
+        width: 92%;
+
+        padding: 25px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .guardar,
+    .cancelar {
+        width: 100%;
+    }
+}

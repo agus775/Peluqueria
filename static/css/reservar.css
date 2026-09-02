@@ -1,0 +1,1018 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            #464540 0%,
+            #242421 38%,
+            #0e0e0d 100%
+        );
+
+    color: #f3f0e8;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contenedor {
+
+    width: 100%;
+
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 45px 35px 55px;
+
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.mini-titulo {
+
+    color: #b99552;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.titulo h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 70px);
+
+    font-weight: normal;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+
+    color: #f4f1e8;
+
+}
+
+
+.subtitulo {
+
+    color: #94928c;
+
+    margin-top: 15px;
+
+    font-size: 15px;
+
+}
+
+
+.linea-titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.linea-titulo span {
+
+    width: 110px;
+
+    height: 1px;
+
+    background: #62583f;
+
+}
+
+
+.linea-titulo b {
+
+    color: #bd9954;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+.formularios {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 28px;
+
+}
+
+
+/* =========================================
+   CARDS DE FORMULARIO
+========================================= */
+
+.card-form {
+
+    padding: 30px;
+
+    min-height: 445px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #20211f,
+            #151614
+        );
+
+    border: 1px solid #383833;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s ease;
+
+}
+
+
+.card-form:hover {
+
+    border-color: #806b43;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   HEADER CARD
+========================================= */
+
+.card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 22px;
+
+    border-bottom:
+        1px solid #33332f;
+
+    margin-bottom: 3px;
+
+}
+
+
+.icono {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #9c7c42;
+
+    color: #c5a05b;
+
+    font-size: 20px;
+
+}
+
+
+.numero-seccion {
+
+    color: #9d7940;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.card-header h2 {
+
+    color: #f2eee5;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+
+    font-weight: normal;
+
+    margin: 2px 0 4px;
+
+}
+
+
+.card-header p {
+
+    color: #77756e;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   DATOS
+========================================= */
+
+.datos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 18px;
+
+}
+
+
+.datos label {
+
+    color: #d8d4cb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.datos input,
+.datos select {
+
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    background: #292a28;
+
+    color: #eeeae1;
+
+    border: 1px solid #3b3b36;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.datos input::placeholder {
+
+    color: #74736d;
+
+}
+
+
+.datos input:hover,
+.datos select:hover {
+
+    border-color: #66583d;
+
+}
+
+
+.datos input:focus,
+.datos select:focus {
+
+    border-color: #b18d4d;
+
+    background: #30312e;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(177, 141, 77, 0.10);
+
+}
+
+
+.datos select {
+
+    cursor: pointer;
+
+}
+
+
+.datos select option {
+
+    background: #20211f;
+
+    color: white;
+
+}
+
+
+.datos input[type="date"],
+.datos input[type="time"] {
+
+    color-scheme: dark;
+
+}
+
+
+/* =========================================
+   BARBEROS
+========================================= */
+
+.seccion-barberos {
+
+    margin-top: 65px;
+
+}
+
+
+.titulo-barberos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.titulo-barberos .linea {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #41413c;
+
+}
+
+
+.texto-barberos {
+
+    text-align: center;
+
+}
+
+
+.texto-barberos span {
+
+    color: #a17f45;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+}
+
+
+.texto-barberos h2 {
+
+    margin-top: 5px;
+
+    color: #c2a05c;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+}
+
+
+.texto-barberos p {
+
+    margin-top: 5px;
+
+    color: #77756e;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.barberos-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =========================================
+   TARJETA BARBERO
+========================================= */
+
+.barbero-card {
+
+    overflow: hidden;
+
+    background: #171816;
+
+    border: 1px solid #363631;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.barbero-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #9c7b42;
+
+    box-shadow:
+        0 22px 45px
+        rgba(0, 0, 0, 0.5);
+
+}
+
+
+.barbero-card.seleccionado {
+
+    border-color: #c19a51;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(193, 154, 81, 0.25),
+        0 20px 45px
+        rgba(0, 0, 0, 0.5);
+
+    transform: translateY(-6px);
+
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.foto {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 270px;
+
+    overflow: hidden;
+
+    background: #252522;
+
+}
+
+
+.foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(80%);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+
+}
+
+
+.barbero-card:hover .foto img,
+.barbero-card.seleccionado .foto img {
+
+    filter: grayscale(15%);
+
+    transform: scale(1.06);
+
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.numero {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #b08b4a;
+
+    background:
+        rgba(10, 10, 9, 0.78);
+
+    color: #c4a05b;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   CHECK
+========================================= */
+
+.seleccion {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 15px;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #bd9954;
+
+    color: #11110f;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    transform: scale(0.7);
+
+    transition: 0.3s ease;
+
+}
+
+
+.barbero-card.seleccionado .seleccion {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================
+   INFO BARBERO
+========================================= */
+
+.info {
+
+    padding: 22px 20px 25px;
+
+    text-align: center;
+
+}
+
+
+.info h3 {
+
+    color: #f0ece4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+
+}
+
+
+.info span {
+
+    display: inline-block;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #806b42;
+
+    color: #b9934e;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+}
+
+
+.info p {
+
+    max-width: 240px;
+
+    margin: 13px auto 0;
+
+    color: #85837c;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.acciones {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+}
+
+
+/* =========================================
+   SOY BARBERO
+========================================= */
+
+.btn-barbero {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 23px;
+
+    text-decoration: none;
+
+    color: #d7d3ca;
+
+    border: 1px solid #44443e;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.btn-barbero span {
+
+    color: #b99552;
+
+}
+
+
+.btn-barbero:hover {
+
+    color: white;
+
+    border-color: #9b7943;
+
+    background: #1c1d1b;
+
+}
+
+
+/* =========================================
+   RESERVAR
+========================================= */
+
+.btn-reservar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #bd9954;
+
+    color: #151411;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+
+}
+
+
+.btn-reservar span {
+
+    font-size: 20px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.btn-reservar:hover {
+
+    background: #d4b16d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.4);
+
+}
+
+
+.btn-reservar:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+.btn-reservar:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .contenedor {
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+
+    }
+
+
+    .formularios {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .card-form {
+
+        min-height: auto;
+
+    }
+
+
+    .barberos-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        padding:
+            30px
+            15px
+            40px;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .linea-titulo span {
+
+        width: 55px;
+
+    }
+
+
+    .card-form {
+
+        padding: 22px;
+
+    }
+
+
+    .barberos-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .foto {
+
+        height: 300px;
+
+    }
+
+
+    .titulo-barberos {
+
+        gap: 10px;
+
+    }
+
+
+    .titulo-barberos .linea {
+
+        display: none;
+
+    }
+
+
+    .texto-barberos h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .acciones {
+
+        flex-direction: column-reverse;
+
+        gap: 15px;
+
+    }
+
+
+    .btn-barbero,
+    .btn-reservar {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}

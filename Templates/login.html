@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Barbero</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+</head>
+
+<body>
+
+
+
+
+    <div class="login">
+
+
+        <form action="{{ url_for('login') }}" method="POST">
+
+            <h1>Bienvenido
+            </h1>
+
+            <h2>Listo para cortar?</h2>
+
+
+            <div class="datos">
+                <label>Usuario</label>
+                <input type="text" name="usuario" placeholder="Usuario" required>
+
+            </div>
+
+            <div class="datos">
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña" required>
+
+            </div>
+
+
+
+            <div class="boton">
+
+                <button type="submit">
+
+                    <span>
+                        Iniciar sesión
+
+                    </span>
+
+
+                </button>
+            </div>
+
+
+        </form>
+
+
+        {% if error %}
+
+        <p style="color: red;">
+            {{ error }}
+        </p>
+
+        {% endif %}
+
+
+
+
+    </div>
+
+    <a href="{{ url_for('reservar') }}">
+        <button>
+
+            Volver
+
+        </button>
+
+    </a>
+
+
+
+</body>
+
+</html>

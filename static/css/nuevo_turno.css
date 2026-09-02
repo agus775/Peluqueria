@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-style: oblique;
+}
+
+body {
+    background: #b9b5b5;
+}
+
+header {
+    height: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.contenedor-formulario {
+    padding: 20px;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 250px;
+}
+
+
+/* CUADRADO PERSONAL */
+
+.personal {
+    background-color: rgb(146, 139, 139);
+    border-radius: 2px;
+    padding: 30px;
+
+    width: 300px;
+    min-height: 300px;
+    box-shadow: 0px 6px 10px rgb(0, 0, 0);
+}
+
+
+/* CUADRADO BARBERÍA */
+
+.barberia {
+    background-color: rgb(146, 139, 139);
+    border-radius: 2px;
+    padding: 30px;
+
+    width: 300px;
+    min-height: 300px;
+    box-shadow: 0px 6px 10px rgb(0, 0, 0);
+}
+
+
+/* TÍTULOS */
+
+h2 {
+    margin-bottom: 25px;
+    color: rgb(46, 45, 45);
+}
+
+
+/* LABELS */
+
+.contenedor-formulario label {
+    display: block;
+
+    background-color: rgb(225, 226, 228);
+    border-radius: 5px;
+    width: 67px;
+
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* INPUTS */
+
+.contenedor-formulario input {
+    height: 35px;
+    box-shadow: 0px 6px 10px rgb(61, 61, 61);
+    width: 100%;
+
+    border-radius: 2px;
+    border: none;
+
+    font-size: 18px;
+    background-color: aliceblue;
+
+    margin-bottom: 15px;
+}
+
+
+/* SELECT */
+
+.contenedor-formulario select {
+    background-color: aliceblue;
+
+    border: none;
+    border-radius: 5px;
+
+    height: 35px;
+    width: 100%;
+    box-shadow: 0px 6px 10px rgb(61, 61, 61);
+    margin-bottom: 15px;
+}
+
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    margin-bottom: 10px;
+}
+
+.botones button {
+    font-size: 14px;
+
+    padding: 10px 10px;
+
+    border: none;
+    border-radius: 3px;
+
+    transition: 0.5s ease;
+}
+
+
+/* GUARDAR */
+
+.guardar {
+    background-color: rgb(158, 157, 157);
+    cursor: pointer;
+}
+
+.guardar:hover {
+    background-color: rgb(47, 184, 12);
+}
+
+
+/* CANCELAR */
+
+.cancelar {
+    background-color: rgb(158, 157, 157);
+    cursor: pointer;
+}
+
+.cancelar:hover {
+    background-color: rgb(184, 8, 8);
+}

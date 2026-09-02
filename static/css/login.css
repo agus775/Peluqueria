@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top,
+            #3a3935 0%,
+            #22221f 35%,
+            #0e0e0d 100%);
+
+
+
+    padding-top: 5px;
+}
+
+
+.login {
+    width: 33%;
+    margin: 10px auto 0;
+    height: 450px;
+    margin-top: 50px;
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid #3a3934;
+
+    background:
+        linear-gradient(145deg,
+            #242521,
+            #151614);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.login:hover {
+    transform: translateY(-4px);
+
+    border-color: #806c43;
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(195, 161, 92, 0.05);
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+
+
+}
+
+
+.datos {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* ESTE FALTABA */
+    height: 90px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login input,
+.login select {
+    width: 50%;
+
+    height: 30px;
+
+    padding: 7px 11px;
+
+    border: 1px solid #44433e;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #292a28;
+
+    color: #eeeae1;
+
+    font-size: 14px;
+
+    font-style: normal;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+.login input:hover,
+.login select:hover {
+    border-color: #a58a52;
+}
+
+.login input:focus,
+.login select:focus {
+    border-color: #c3a15c;
+
+    box-shadow:
+        0 0 0 2px rgba(195, 161, 92, 0.15);
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6vw, 58px);
+
+    line-height: 1;
+
+    color: #f5f2ea;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: #f5f2ea;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+
+span {
+    display: inline-block;
+    transform: skew(21deg);
+
+
+}
+
+.boton button {
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    transform: skew(-29deg);
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid beige;
+    transition: all 0.5s;
+}
+
+.boton button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: #d2b16d;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.boton button:hover {
+    color: black;
+    border: none;
+
+}
+
+.boton button:hover:before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+
+}
+
+
+
+a {
+
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+
+
+}
+
+
+a button {
+    border: none;
+    outline: none;
+    background: #d2b16d;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0c0c0c;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+    box-shadow: 0px 5px 0px 0px #63382d;
+    cursor: pointer;
+}
+
+a button:active {
+    background: #856c3a;
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #1a1a1b;
+}

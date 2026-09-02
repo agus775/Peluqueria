@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BarberShop</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <div class="afue">
+
+        <div class="cua">
+
+            <nav>
+
+                <div class="nav-marca">
+                    BARBERSHOP
+                </div>
+
+                <div class="nav-links">
+
+                    <a href="{{ url_for('nuevo') }}">
+                        Reservar Turno
+                    </a>
+
+                    <a href="{{ url_for('logout') }}"
+                       class="btn-salir">
+                        Cerrar sesión
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <header>
+
+                <h1>
+                    BARBER<br>
+                    SHOP
+                </h1>
+
+                <p>
+                    Reservá tu turno de manera rápida y sencilla.
+                    Elegí tu servicio, tu barbero y el horario
+                    que mejor te quede.
+                </p>
+
+            </header>
+
+
+            <!-- BUSCADOR -->
+
+            <section class="busqueda">
+
+                <form action="{{ url_for('buscar') }}" method="POST">
+
+                    <input
+                        type="text"
+                        name="buscar"
+                        placeholder="Buscar cliente..."
+                    >
+
+                    <button type="submit">
+                        BUSCAR
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         TURNOS
+    ====================================== -->
+
+    <section>
+
+        <h2>
+            Turnos registrados
+        </h2>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Cliente</th>
+
+                    <th>Servicio</th>
+
+                    <th>Barbero</th>
+
+                    <th>Precio</th>
+
+                    <th>Fecha</th>
+
+                    <th>Hora</th>
+
+                    <th>Estado</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for turno in turnos %}
+
+                <tr>
+
+                    <td>
+                        #{{ turno.id_turno }}
+                    </td>
+
+
+                    <td>
+                        {{ turno.nombre }}
+                        {{ turno.apellido }}
+                    </td>
+
+
+                    <td>
+                        {{ turno.servicio }}
+                    </td>
+
+
+                    <td>
+                        {{ turno.empleado }}
+                    </td>
+
+
+                    <td>
+                        ${{ turno.precio }}
+                    </td>
+
+
+                    <td>
+                        {{ turno.fecha }}
+                    </td>
+
+
+                    <td>
+                        {{ turno.hora }}
+                    </td>
+
+
+                    <td>
+                        {{ turno.estado }}
+                    </td>
+
+
+                    <td>
+
+                        <a href="{{ url_for('editar', id=turno.id_turno) }}">
+
+                            <button class="editar">
+                                Editar
+                            </button>
+
+                        </a>
+
+
+                        <a href="{{ url_for('eliminar', id=turno.id_turno) }}"
+                           onclick="return confirm('¿Desea eliminar este turno?')">
+
+                            <button class="eliminar">
+                                Eliminar
+                            </button>
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            <strong>BARBERSHOP</strong>
+            — Sistema de gestión de turnos
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

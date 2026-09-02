@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Turno confirmado</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/turno_confirmado.css') }}">
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="btn-menu">
+            <label for="btn-menu">☰</label>
+        </div>
+
+        <input type="checkbox" id="btn-menu">
+
+        <div class="capa"></div>
+
+        <div class="container-menu">
+            <label for="btn-menu">✖️</label>
+            <div class="cont-menu">
+                <nav>
+                    <a href="{{ url_for('reservar') }}">
+
+                        Reservar otro turno
+
+                    </a>
+
+                    <a href="{{ url_for('login') }}">
+
+                        Soy barbero
+
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor">
+
+        <div class="titulo">
+            <h1>Turno agendado correctamente</h1>
+
+
+        </div>
+
+        <div class="datos">
+
+
+            <p>
+                <strong>Cliente:</strong>
+                {{ nombre }} {{ apellido }}
+            </p>
+
+            <p>
+                <strong>Barbero:</strong>
+                {{ empleado }}
+            </p>
+
+            <p>
+                <strong>Servicio:</strong>
+                {{ servicio }}
+            </p>
+
+            <p>
+                <strong>Precio:</strong>
+                ${{ precio }}
+            </p>
+
+            <p>
+                <strong>Fecha:</strong>
+                {{ fecha }}
+            </p>
+
+            <p>
+                <strong>Hora:</strong>
+                {{ hora }}
+            </p>
+        </div>
+
+
+
+
+    </div>
+    <div class="confirmacion">
+
+        <div class="linea-titulo">
+            <span></span>
+            <p>¡Te esperamos!</p>
+            <span></span>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

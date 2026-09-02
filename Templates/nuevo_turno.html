@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Turno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nuevo_turno.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Reservar Turno</h1>
+    </header>
+
+    <div class="contenedor-formulario">
+
+        <form action="{{ url_for('nuevo') }}" method="POST">
+
+            <div class="personal">
+
+                <h2>Datos personales</h2>
+
+                <div class="nombre">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" required>
+                </div>
+
+                <div class="apellido">
+                    <label>Apellido</label>
+                    <input type="text" name="apellido" required>
+                </div>
+
+                <div class="dni">
+                    <label>DNI</label>
+                    <input type="text" name="dni" required>
+                </div>
+
+                <div class="telefono">
+                    <label>Teléfono</label>
+                    <input type="text" name="telefono" required>
+                </div>
+
+            </div>
+
+
+            <div class="barberia">
+
+                <h2>Datos de la barbería</h2>
+
+                <div class="barbero">
+                    <label>Barbero</label>
+
+                    <select name="empleado" required>
+                        {% for empleado in empleados %}
+                        <option value="{{ empleado.id_empleado }}">
+                            {{ empleado.nombre }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="servicio">
+                    <label>Servicio</label>
+
+                    <select name="servicio" required>
+                        {% for servicio in servicios %}
+                        <option value="{{ servicio.id_servicio }}">
+                            {{ servicio.nombre }} - ${{ servicio.precio }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="fecha">
+                    <label>Fecha</label>
+                    <input type="date" name="fecha" required>
+                </div>
+
+                <div class="hora">
+                    <label>Hora</label>
+                    <input type="time" name="hora" required>
+                </div>
+
+            </div>
+
+
+            <div class="botones">
+
+                <button type="submit" class="guardar">
+                    Guardar Turno
+                </button>
+
+                <a href="{{ url_for('index') }}">
+                    <button type="button" class="cancelar">
+                        Cancelar
+                    </button>
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
